@@ -1,0 +1,208 @@
+
+## 🎥 Overview
+
+**Vertical Video Converter GUI** is a simple but powerful desktop tool for transforming videos into mobile-friendly formats. Whether you're preparing content for **WhatsApp, TikTok, Instagram Reels, or YouTube Shorts**, this tool handles everything:
+
+* Convert **landscape → portrait**
+* Crop to any region
+* Resize to popular presets (TikTok, Reels, Shorts)
+* Add custom audio tracks (MP3/WAV)
+* Strip existing audio
+* Add beautiful text overlays
+* Reduce file size with bitrate control
+* Preview input videos
+* View detailed FFmpeg logs
+* 100% **CPU-based** — **No CUDA required**
+
+It’s fast, user-friendly, and perfect for content creators.
+
+---
+
+## ✨ Features
+
+### 🎬 **Video Processing**
+
+* Rotate landscape to portrait
+* Resize (custom or preset)
+* Crop by X/Y/W/H values
+* Maintain quality with scaling filters
+* Bitrate control for WhatsApp/TikTok friendly files
+
+### 🔊 **Audio Options**
+
+* Add external MP3/WAV audio
+* Replace original audio
+* Strip existing audio
+
+### ✍️ **Text Overlay**
+
+* Add text with customizable positioning
+* Auto-escape unsafe characters
+* White font with clean styling
+
+### 🖼️ **Presets Included**
+
+| Platform        | Resolution  |
+| --------------- | ----------- |
+| TikTok          | 1080 × 1920 |
+| Instagram Reels | 720 × 1280  |
+| YouTube Shorts  | 608 × 1080  |
+
+### 🛠️ **UI Enhancements**
+
+* FFmpeg log viewer (see actual error messages)
+* Preview input video via FFplay
+* Progress indicator
+* Clean dark-theme log console
+
+---
+
+## 📸 Screenshots
+
+> Replace these placeholders with your own screenshots.
+
+### 🎛 Main Interface
+
+![screenshot](./screenshots/main-ui.png)
+
+### 📝 Conversion Log
+
+![screenshot](./screenshots/log-window.png)
+
+---
+
+## 🚀 Installation
+
+### 1. Install Python
+
+Python **3.8 or higher** is required.
+Download from: [https://www.python.org/downloads/](https://www.python.org/downloads/)
+
+### 2. Install FFmpeg
+
+The application depends on **FFmpeg**.
+
+#### Windows:
+
+* Download: [https://ffmpeg.org/download.html](https://ffmpeg.org/download.html)
+* Extract → Add `bin/` folder to **System PATH**
+
+#### macOS:
+
+```sh
+brew install ffmpeg
+```
+
+#### Linux:
+
+```sh
+sudo apt install ffmpeg
+```
+
+### 3. Install Dependencies
+
+This project uses only built-in Python modules (Tkinter, subprocess).
+No pip installation needed.
+
+---
+
+## ▶️ Usage
+
+Run the app using:
+
+```sh
+python video_tool.py
+```
+
+(or whatever filename you saved it as)
+
+### Steps:
+
+1. Choose **input video**
+2. Choose **output filename**
+3. Enable/disable:
+
+   * Rotate
+   * Resize
+   * Crop
+   * Add external audio
+   * Strip existing audio
+4. Add optional text overlay
+5. Select bitrate for size reduction
+6. Click **Convert**
+
+FFmpeg logs will appear in the log window.
+
+---
+
+## 📦 Folder Structure
+
+```
+📁 project
+ ┣ 📄 video_tool.py
+ ┣ 📄 README.md
+ ┗ 📁 screenshots
+      ┣ main-ui.png
+      ┗ log-window.png
+```
+
+---
+
+## 🧩 Built With
+
+* **Python Tkinter** – GUI framework
+* **FFmpeg** – video & audio processing engine
+* **FFplay** – preview player (optional)
+
+---
+
+## ❓ FAQ
+
+### ❔ Where is the output saved?
+
+Wherever you choose via **Save As**.
+The path is shown in the **Output Video** field.
+
+### ❔ Why does output look blurry on WhatsApp?
+
+WhatsApp compresses videos heavily.
+Use:
+
+```
+Bitrate: 2000k
+Resolution: 1080x1920
+```
+
+### ❔ Does this require CUDA?
+
+❌ **No.**
+This version is fully CPU-based.
+
+---
+
+## 🤝 Contributing
+
+Pull requests are welcome!
+If you’d like to add:
+
+* visual cropping
+* drag-and-drop files
+* output folder auto-open
+* GPU (CUDA / Vulkan) support
+* presets for more platforms
+
+Feel free to contribute or request features.
+
+---
+
+## 📜 License
+
+This project is licensed under the **MIT License** – free for personal & commercial use.
+
+---
+
+## ⭐ Support the Project
+
+If you like this, give the repo a ⭐ on GitHub!
+It helps visibility and encourages more updates.
+
